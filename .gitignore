@@ -2,6 +2,6 @@
 *.iml
 *.ipr
 *.iws
-.idea/workspace.xml
+*.idea/workspace.xml
 .idea/
 out/
