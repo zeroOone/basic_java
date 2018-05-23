@@ -8,4 +8,5 @@ src/main/java/RunTimeJob/
 target/classes/RunTimeJob/
 src/main/webapp/WEB-INF/web.xml
 target/
+target/classes
 out/
