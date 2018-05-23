@@ -45,8 +45,22 @@ public class ThreadInterruptDemo{
         }
         //中断线程（通过主线程在后台对象上执行interrupt方法）
         thdA.interrupt();
+        //判断当前线程是否中断，当前线程应该是main主线程，正确的应该返回false——未中断
+        System.out.println("1 : " +Thread.interrupted());
+        //判断thdA线程是否已经中断 : true
+        System.out.println("2 : " +thdA.isInterrupted());
+        //判断thdB线程是否已经中断 : false
+        System.out.println("3 : " +thdB.isInterrupted());
         thdB.interrupt();
+        //判断thdB此时是否已经中断 ： true
+        System.out.println("4 : " +thdB.isInterrupted());
+        //再判断当前线程（main主线程只有程序结束时才会中断）是否已经中断 ： false
+        System.out.println("5 : " +Thread.interrupted());
     }
+    /**
+     * 最后判断线程是否中断的时候，正确的结果应该是 1:fasle 2:true; 3:false 4:true; 5:false
+     * 然而实际情况并非如此，因为这是个线程并行的程序，而且调用一个中断线程的方法时，被中断线程并不会立马中断
+     */
 
 
 }
