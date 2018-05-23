@@ -35,7 +35,6 @@ public class ThreadDemo {
         boolean isDaemon = args.length != 0;
 
         //Runnable负责执行线程代码，所以必须要重写run函数，而这里就是个匿名函数；
-        //如果觉得匿名函数看着不舒服，可以通过让类implement该接口，来实现run方法;
         Runnable r = new Runnable() {
             @Override
             //线程执行的代码
