@@ -5,7 +5,8 @@ package ThreadAndRunnable;
  *
  * method: 1: void interrupt() —— 调用此方法的线程被中断
  *         2: static boolean interrupted() —— 判断当前线程是否中断 ， 是 == true；
- *         3: boolean isInterrupted() —— 判断线程是否中断， 是 == true
+ *         3: boolean isInterrupted() —— 判断调用该方法的线程是否中断， 是 == true
+ *         注意区分 2和3
  *
  * 1 ： 线程被中断的时候，抛出 ： java.lang.InterruptedException, 需要捕获该异常
  * 2 ： sleep或者join方法也需要捕获上述异常
