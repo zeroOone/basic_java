@@ -5,4 +5,6 @@
 .idea/workspace.xml
 .idea/
 src/main/java/RunTimeJob/
+target/classes/RunTimeJob/
+
 out/
