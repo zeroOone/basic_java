@@ -33,6 +33,8 @@ public class ThreadInterruptDemo{
         thdB.start();
 
         //消耗时间 （相当于上述给上述任务分配执行时间，当n落入if判断范围，while中断，意味着线程执行时间到了）
+        //这里可以使用 sleep函数替代： try{sleep(2000)}cath(InterruptedException e) {}
+        //睡眠时间是大概的时间，打印出来的行数会有差异，但是差异不大
         while (true) {
             double n = Math.random();
 
