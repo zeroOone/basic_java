@@ -53,6 +53,7 @@ public class DeadLockDemo {
             public void run() {
                 while (true) {
                     dld.instanceMethod2();
+
                     try {
                         Thread.sleep(50);
                     } catch (InterruptedException e) {
@@ -87,7 +88,7 @@ public class DeadLockDemo {
  *                          A持有lock1，在等lock2；B持有lock2，在等lcok1；
  *                          互相等待，结果谁也没办法通过临界区，于是程序死锁，冻结；
  *
- *         在这里，睡眠的作用是为了能在某一时刻，线程A与B同时进行方法调用；
+ *         在这里，睡眠的作用是为了跳出忙循环让另一个线程有机会运行，并能在某一时刻，使得线程A与B同时进行方法调用；
  *         尽管线程并发，但是并不是掐着时间点同时启动的。
  *
  **/
