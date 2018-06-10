@@ -1,0 +1,12 @@
+# IntelliJ 可以忽略提交的文件
+*.iml
+*.ipr
+*.iws
+.idea/workspace.xml
+.idea/
+src/main/java/RunTimeJob/
+target/classes/RunTimeJob/
+src/main/webapp/WEB-INF/web.xml
+target/
+target/classes
+out/

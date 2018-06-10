@@ -4,4 +4,8 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <!-- 获取Token定时任务监听器 -->
+  <listener>
+    <listener-class>RunTimeJob.TaskListner</listener-class>
+  </listener>
 </web-app>
